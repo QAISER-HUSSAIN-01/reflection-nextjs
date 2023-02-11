@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.heading{
+    font-size: 20px;
+}
+.button{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+}

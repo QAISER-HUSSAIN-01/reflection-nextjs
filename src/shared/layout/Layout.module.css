@@ -1,0 +1,23 @@
+.layout{
+    height: 100vh;
+    width: 100%;
+}
+.navbarContainer{
+    height: 8vh;
+    box-shadow: 1px 1px 3px gray;
+}
+.sectionContainer{
+    display: flex;
+    height: calc(100vh - 8vh);
+}
+
+.sidebarContainer{
+    width: max-content;
+    overflow-y: auto;
+    box-shadow: 1px 3px 3px gray;
+}
+.contentContainer{
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
