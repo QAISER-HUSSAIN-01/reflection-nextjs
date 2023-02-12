@@ -21,3 +21,9 @@
     overflow-y: auto;
     padding: 10px;
 }
+
+@media (max-width:600px){
+    .navbarContainer{height: 6vh;}
+    .sectionContainer{height: calc(100vh - 6vh);}
+    .sidebarContainer{position: absolute; bottom: 0; top: 6vh; left: 0px; background-color: white;}
+}

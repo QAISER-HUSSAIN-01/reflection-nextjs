@@ -1,8 +1,10 @@
-:root {}
-
-@media (max-width:600px) {
-  :root {}
+/* :root {
+  --nav__heading:'24px';
+  --nav__background:'yellow';
+  --nav__heading__small:'18px';
 }
+ */
+
 
 *{
   box-sizing: border-box;
@@ -16,4 +18,17 @@ body{
   overflow-x: hidden;
 }
 
-body {}
+body {
+  /* background-color: yellow; */
+}
+
+.nav__heading{
+  font-size: '24px';
+}
+
+
+@media (max-width:600px) {
+  .nav__heading{
+    font-size: 18px;
+  }
+}
