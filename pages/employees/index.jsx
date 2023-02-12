@@ -4,7 +4,7 @@ import { data } from '../../src/shared/data';
 import styles from '../../styles/Employees.module.css';
 import { MdAccountBalance, MdDelete, MdEdit } from 'react-icons/md';
 import { useRouter } from 'next/router';
-import { Box, styled, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import { Box, Button, styled, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 
 function Employees() {
   const [users, setUsers] = useState(data);
@@ -24,10 +24,16 @@ function Employees() {
     router.push('/employees/add');
     // router.push({ pathname: '/employees/add', query: edit[0] });
   }
+  const handleLink = ()=>{
+    router.push('/employees/add')
+  }
 
   return (
     <Box sx={{padding:{lg:'10px',md:'10px',sm:'5px'}}}>
+      <Box sx={{display:'flex',justifyContent:'space-between',marginBottom:'10px'}}>
       <Heading heading={"Employees List"} />
+      <Button color='warning' variant='contained' size='small' onClick={handleLink}>Add</Button>
+      </Box>
       <TableContainer >
         <Table sx={{ minWidth: '800px', border:'1px solid lightgrey' }}>
           <TableHead sx={{backgroundColor:'#f4f4f4'}}>
