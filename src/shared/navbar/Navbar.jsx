@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Navbar.module.css';
 import { MdAccountCircle, MdMenu } from 'react-icons/md';
-import { IconButton, styled, Typography } from '@mui/material';
+import { IconButton, styled, Typography,Avatar } from '@mui/material';
 
 function Navbar({ handleSidebar }) {
 
@@ -14,7 +14,7 @@ function Navbar({ handleSidebar }) {
         <Typography variant='h6'>Reflection</Typography>
       </Logo>
       <IconButton>
-        <MdAccountCircle />
+        <Avatar />
       </IconButton>
     </div>
   )
