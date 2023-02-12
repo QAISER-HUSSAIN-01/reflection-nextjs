@@ -4,15 +4,17 @@ import styles from '../../styles/Employees.module.css';
 import { MdAccountBalance, MdDelete, MdEdit } from 'react-icons/md';
 import { Box, Button, IconButton, styled, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import useEmployees from '../../src/hooks/employees';
-
+import Link from 'next/link';
 function Employees() {
-const [handleEdit,handleDelete,handleUser,handleLink,users] = useEmployees();
-  
+  const [handleEdit, handleDelete, handleUser, users] = useEmployees();
+
   return (
-    <Box sx={{ padding: { lg: '10px', md: '10px', sm: '5px' } }}>
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+    <Box sx={{ padding: { lg: '20px 40px', md: '20px 40px', sm: '20px', xs:'10px'} }}>
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
         <Heading heading={"Employees List"} />
-        <Button color='warning' variant='contained' size='small' onClick={handleLink}>Add</Button>
+        <Link href={'/employees/add'} style={{ textDecoration: 'none' }}>
+          <Button color='warning' variant='contained' size='small'>Add</Button>
+        </Link>
       </Box>
       <TableContainer>
         <Table sx={{ minWidth: '800px', border: '1px solid lightgrey' }}>
@@ -33,7 +35,7 @@ const [handleEdit,handleDelete,handleUser,handleLink,users] = useEmployees();
                 <StyledTableCell>{item.department}</StyledTableCell>
                 <StyledTableCell>{item.phone}</StyledTableCell>
                 <StyledTableCell>
-                  <IconButton><MdAccountBalance className={styles.one} onClick={handleUser} /></IconButton>
+                  <IconButton><MdAccountBalance className={styles.one} onClick={() => handleUser()} /></IconButton>
                   <IconButton><MdDelete className={styles.two} onClick={() => handleDelete(item.id)} /></IconButton>
                   <IconButton><MdEdit className={styles.three} onClick={() => handleEdit(item.id)} /></IconButton>
                 </StyledTableCell>

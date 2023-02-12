@@ -5,23 +5,7 @@
     height: 100%;
     padding: 0 20px;
 }
-.logo{
-    font-size: 24px;
-    letter-spacing: 1px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-.profile{
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    cursor: pointer;
-}
 
 @media (max-width:600px){
     .navbar{padding: 0 10px;}
-    .logo{font-size: 18px;gap: 10px;letter-spacing: 0;}
-    .profile{font-size: 20px;}
 }

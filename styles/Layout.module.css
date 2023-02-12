@@ -26,7 +26,7 @@
 }
 
 @media (max-width:600px){
-    .navbarContainer{height: 8vh;}
-    .sectionContainer{height: calc(100vh - 8vh);}
-    .sidebarContainer{position: absolute; bottom: 0; top: 8vh; left: 0px; background-color: white;}
+    .navbarContainer{height: 7vh;}
+    .sectionContainer{height: calc(100vh - 7vh);}
+    .sidebarContainer{position: absolute; bottom: 0; top: 7vh; left: 0px; background-color: white;}
 }

@@ -4,12 +4,18 @@ import styles from '../../styles/Employees.module.css';
 import { Box, Button, ButtonGroup, Checkbox, FormControlLabel, MenuItem, styled, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from '@mui/material';
 import { MdFileCopy, MdApps } from 'react-icons/md'
 import useScreen from '../../src/hooks/screen';
+import Link from 'next/link';
 
 function AddEmployee() {
-const [screenWidth,fixedWidth] = useScreen();
+  const [screenWidth, fixedWidth] = useScreen();
   return (
-    <div className={styles.formContainer}>
-      <Heading heading={'Add Employee'} />
+    <Box sx={{ padding: { lg: '20px 40px', md: '20px 40px', sm: '20px', xs: '10px' } }}>
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
+        <Heading heading={'Add Employee'} />
+        <Link href={'/employees'} style={{ textDecoration: 'none' }}>
+          <Button color='warning' variant='contained' size='small'>  Add </Button>
+        </Link>
+      </Box>
       <Box component={'form'}>
         <Detail className={styles.detail} variant="subtitle2">
           <InputGroup>
@@ -45,8 +51,8 @@ const [screenWidth,fixedWidth] = useScreen();
 
         <Commission className={styles.commission} variant="subtitle2">
           <FormControlLabel control={<Checkbox defaultChecked />} label="No commission for this employee" />
-          <Box sx={{ display: 'flex', justifyContent: 'end' }}>
-            <ButtonGroup size='small' fullWidth={screenWidth < 600 ? true : fixedWidth < 600 ? true:false} orientation={ screenWidth < 600 ? 'vertical' : fixedWidth < 600 ? 'vertical':'horizontal'}>
+          <Box sx={{ display: 'flex', justifyContent: 'end', marginBottom: '10px' }}>
+            <ButtonGroup size='small' fullWidth={screenWidth < 600 ? true : fixedWidth < 600 ? true : false} orientation={screenWidth < 600 ? 'vertical' : fixedWidth < 600 ? 'vertical' : 'horizontal'}>
               <Button size='small' startIcon={<MdFileCopy />}>Clone</Button>
               <Button size='small' startIcon={<MdApps />}>All Packages</Button>
               <Button size='small' startIcon={<MdApps />}>All Products</Button>
@@ -54,8 +60,8 @@ const [screenWidth,fixedWidth] = useScreen();
           </Box>
 
           <TableContainer>
-            <Table sx={{ minWidth: '800px', border:'1px solid lightgrey' }} >
-              <TableHead sx={{backgroundColor:'#f4f4f4'}}>
+            <Table sx={{ minWidth: '800px', border: '1px solid lightgrey' }} >
+              <TableHead sx={{ backgroundColor: '#f4f4f4' }}>
                 <TableRow >
                   <TableCell>Prodcut Title</TableCell>
                   <TableCell>Comm Type</TableCell>
@@ -87,11 +93,11 @@ const [screenWidth,fixedWidth] = useScreen();
               </TableBody>
             </Table>
           </TableContainer>
-        
+
         </Commission>
-      
+
       </Box>
-    </div>
+    </Box>
   )
 }
 
@@ -99,7 +105,7 @@ const Detail = styled(Typography)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   gap: '10px',
-  marginTop:'30px'
+  marginTop: '30px'
 
 }));
 const InputGroup = styled(Box)(({ theme }) => ({
@@ -112,7 +118,7 @@ const InputGroup = styled(Box)(({ theme }) => ({
 }));
 
 const Commission = styled(Typography)(({ theme }) => ({
-  marginTop:'30px'
+  marginTop: '30px'
 }));
 
 export default AddEmployee;
