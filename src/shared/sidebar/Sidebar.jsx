@@ -13,8 +13,7 @@ function Sidebar({hide,handleSidebarLinks}) {
             key={index}
             className={styles.link}
             onClick={handleSidebarLinks}
-            >
-            
+            >    
             <li>
               {item.icon} <span style={{display:hide}}>{item.name} </span>
             </li>

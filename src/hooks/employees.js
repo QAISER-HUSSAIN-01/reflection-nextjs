@@ -18,7 +18,7 @@ export default function useEmployees() {
     const handleEdit = (id) => {
       let temp = [...users];
       let edit = temp.filter(item => item.id === id);
-      router.push('/employees/add');
+      router.push(`/employees/${edit[0].id}`);
       // router.push({ pathname: '/employees/add', query: edit[0] });
     }
     const handleLink = () => {

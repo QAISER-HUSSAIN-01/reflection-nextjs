@@ -23,6 +23,7 @@ export default function useLayout(){
         }
       }
     }
+    
     const handleSidebarLinks = () => {
       if (windowSize < 600 || windowResize < 600 ) {
         if (left === '-500px') {
@@ -34,6 +35,7 @@ export default function useLayout(){
         }
       }
     }
+
     const handleResize = () => {
       const { innerWidth } = window;
       setWindowResize(innerWidth);
