@@ -3,10 +3,10 @@ import Heading from '../../src/components/Heading';
 import styles from '../../styles/Employees.module.css';
 import { Box, Button, ButtonGroup, Checkbox, FormControlLabel, MenuItem, styled, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField } from '@mui/material';
 import { MdFileCopy, MdApps } from 'react-icons/md'
-import useEmployees from '../../src/hooks/employees';
+import useScreen from '../../src/hooks/screen';
 
 function AddEmployee() {
-const [screenWidth,fixedWidth] = useEmployees();
+const [screenWidth,fixedWidth] = useScreen();
   return (
     <div className={styles.formContainer}>
       <Heading heading={'Add Employee'} />
