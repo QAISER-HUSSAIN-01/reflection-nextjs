@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import styles from './Layout.module.css';
+import React from 'react';
+import styles from '../../../styles/Layout.module.css';
 import Navbar from '../navbar/Navbar';
 import Sidebar from '../sidebar/Sidebar';
 import useLayout from '../../hooks/layout';
@@ -13,7 +13,7 @@ function Layout({ children }) {
       </div>
       <div className={styles.sectionContainer}>
         <div className={styles.sidebarContainer} style={{ left: left }} >
-          <Sidebar hide={hide} />
+          <Sidebar hide={hide} handleSidebar={handleSidebar} />
         </div>
         <div className={styles.contentContainer}>
           {children}
