@@ -1,7 +1,13 @@
-import '../styles/globals.css'
-import Layout from '../src/shared/layout/Layout'
-import { useState } from 'react'
+import '../styles/globals.css';
+import Layout from '../src/shared/layout/Layout';
+import { ThemeProvider } from '@mui/material';
+import { theme } from '../src/shared/theme';
 export default function App({ Component, pageProps }) {
-  // const [windowSize, setWindowSize] = useState();
-  return <Layout> <Component {...pageProps} /> </Layout>
+  return (
+    <ThemeProvider theme={theme}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ThemeProvider>
+  )
 }

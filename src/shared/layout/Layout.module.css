@@ -15,6 +15,8 @@
     width: max-content;
     overflow-y: auto;
     box-shadow: 1px 3px 3px gray;
+    z-index: 999;
+    transition: all ease-in-out 0.3s;
 }
 .contentContainer{
     flex: 1;
