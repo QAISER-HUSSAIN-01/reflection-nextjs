@@ -1,7 +1,7 @@
 import React from 'react';
 import Heading from '../../src/components/Heading';
 import styles from '../../styles/Employees.module.css';
-import { Box, Button, ButtonGroup, Checkbox, FormControlLabel, MenuItem, styled, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField } from '@mui/material';
+import { Box, Button, ButtonGroup, Checkbox, FormControlLabel, MenuItem, styled, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from '@mui/material';
 import { MdFileCopy, MdApps } from 'react-icons/md'
 import useScreen from '../../src/hooks/screen';
 
@@ -11,7 +11,7 @@ const [screenWidth,fixedWidth] = useScreen();
     <div className={styles.formContainer}>
       <Heading heading={'Add Employee'} />
       <Box component={'form'}>
-        <Detail className={styles.detail}>
+        <Detail className={styles.detail} variant="subtitle2">
           <InputGroup>
             <TextField id="filled-basic" label="First Name" variant="filled" fullWidth size='small' />
             <TextField id="filled-basic" label="Last Name" variant="filled" fullWidth size='small' />
@@ -43,7 +43,7 @@ const [screenWidth,fixedWidth] = useScreen();
           </InputGroup>
         </Detail>
 
-        <Commission className={styles.commission}>
+        <Commission className={styles.commission} variant="subtitle2">
           <FormControlLabel control={<Checkbox defaultChecked />} label="No commission for this employee" />
           <Box sx={{ display: 'flex', justifyContent: 'end' }}>
             <ButtonGroup size='small' fullWidth={screenWidth < 600 ? true : fixedWidth < 600 ? true:false} orientation={ screenWidth < 600 ? 'vertical' : fixedWidth < 600 ? 'vertical':'horizontal'}>
@@ -95,7 +95,7 @@ const [screenWidth,fixedWidth] = useScreen();
   )
 }
 
-const Detail = styled(Box)(({ theme }) => ({
+const Detail = styled(Typography)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   gap: '10px'
@@ -110,7 +110,7 @@ const InputGroup = styled(Box)(({ theme }) => ({
   }
 }));
 
-const Commission = styled(Box)(({ theme }) => ({}));
+const Commission = styled(Typography)(({ theme }) => ({}));
 
 export default AddEmployee;
 
