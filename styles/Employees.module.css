@@ -22,10 +22,6 @@
 .commission {
     border: 1px solid lightgrey;
     padding: 20px 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
     position: relative;
 }
 

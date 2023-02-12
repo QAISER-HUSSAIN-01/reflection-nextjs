@@ -98,7 +98,8 @@ const [screenWidth,fixedWidth] = useScreen();
 const Detail = styled(Typography)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
-  gap: '10px'
+  gap: '10px',
+  marginTop:'30px'
 
 }));
 const InputGroup = styled(Box)(({ theme }) => ({
@@ -110,7 +111,9 @@ const InputGroup = styled(Box)(({ theme }) => ({
   }
 }));
 
-const Commission = styled(Typography)(({ theme }) => ({}));
+const Commission = styled(Typography)(({ theme }) => ({
+  marginTop:'30px'
+}));
 
 export default AddEmployee;
 
