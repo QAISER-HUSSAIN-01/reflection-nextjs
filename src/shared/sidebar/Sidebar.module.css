@@ -1,3 +1,6 @@
+.sidebar{
+    height: 100%;
+}
 .unorderedList{
     list-style: none;
     padding: 10px 0px 0 0;

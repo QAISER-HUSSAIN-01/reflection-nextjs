@@ -3,7 +3,7 @@ import styles from './Sidebar.module.css'
 import { items } from './list';
 import Link from 'next/link';
 
-function Sidebar({hide,size}) {
+function Sidebar({hide}) {
   return (
     <div className={styles.sidebar}>
       <ul className={styles.unorderedList}>
