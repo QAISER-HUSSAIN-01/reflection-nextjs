@@ -23,7 +23,17 @@ export default function useLayout(){
         }
       }
     }
-  
+    const handleSidebarLinks = () => {
+      if (windowSize < 600 || windowResize < 600 ) {
+        if (left === '-500px') {
+          setLeft('0');
+          setHide('block');
+        } else {
+          setLeft('-500px');
+          setHide('none');
+        }
+      }
+    }
     const handleResize = () => {
       const { innerWidth } = window;
       setWindowResize(innerWidth);
@@ -44,6 +54,6 @@ export default function useLayout(){
       window.addEventListener('resize', handleResize);
     }, []);
 
-    return [handleSidebar,left,hide]
+    return [handleSidebar,handleSidebarLinks,left,hide]
   
 }

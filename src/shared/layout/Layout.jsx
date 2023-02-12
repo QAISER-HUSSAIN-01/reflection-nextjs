@@ -5,7 +5,7 @@ import Sidebar from '../sidebar/Sidebar';
 import useLayout from '../../hooks/layout';
 
 function Layout({ children }) {
-  const [handleSidebar,left,hide] = useLayout();
+  const [handleSidebar,handleSidebarLinks,left,hide] = useLayout();
   return (
     <div className={styles.layout}>
       <div className={styles.navbarContainer}>
@@ -13,7 +13,7 @@ function Layout({ children }) {
       </div>
       <div className={styles.sectionContainer}>
         <div className={styles.sidebarContainer} style={{ left: left }} >
-          <Sidebar hide={hide} handleSidebar={handleSidebar} />
+          <Sidebar hide={hide} handleSidebarLinks={handleSidebarLinks} />
         </div>
         <div className={styles.contentContainer}>
           {children}

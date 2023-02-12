@@ -3,7 +3,7 @@ import styles from './Sidebar.module.css'
 import { items } from './list';
 import Link from 'next/link';
 
-function Sidebar({hide,handleSidebar}) {
+function Sidebar({hide,handleSidebarLinks}) {
   return (
     <div className={styles.sidebar}>
       <ul className={styles.unorderedList}>
@@ -12,7 +12,7 @@ function Sidebar({hide,handleSidebar}) {
             href={item.to}
             key={index}
             className={styles.link}
-            onClick={handleSidebar}
+            onClick={handleSidebarLinks}
             >
             
             <li>
