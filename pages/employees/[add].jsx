@@ -3,7 +3,7 @@ import Heading from '../../src/components/Heading';
 import styles from '../../styles/Employees.module.css';
 import { Box, Button, ButtonGroup, Checkbox, FormControlLabel, MenuItem, styled, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from '@mui/material';
 import { MdFileCopy, MdApps } from 'react-icons/md'
-import useScreen from '../../src/hooks/screen';
+import useScreen from '../../src/hooks/useScreen';
 import Link from 'next/link';
 
 function AddEmployee() {

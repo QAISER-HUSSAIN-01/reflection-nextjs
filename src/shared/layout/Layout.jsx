@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../../../styles/Layout.module.css';
 import Navbar from '../navbar/Navbar';
 import Sidebar from '../sidebar/Sidebar';
-import useLayout from '../../hooks/layout';
+import useLayout from '../../hooks/useLayout';
 
 function Layout({ children }) {
   const [handleSidebar,handleSidebarLinks,left,hide] = useLayout();

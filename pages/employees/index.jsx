@@ -3,7 +3,7 @@ import Heading from '../../src/components/Heading';
 import styles from '../../styles/Employees.module.css';
 import { MdAccountBalance, MdDelete, MdEdit } from 'react-icons/md';
 import { Box, Button, IconButton, styled, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
-import useEmployees from '../../src/hooks/employees';
+import useEmployees from '../../src/hooks/useEmployees';
 import Link from 'next/link';
 function Employees() {
   const [handleEdit, handleDelete, handleUser, users] = useEmployees();
@@ -35,9 +35,9 @@ function Employees() {
                 <StyledTableCell>{item.department}</StyledTableCell>
                 <StyledTableCell>{item.phone}</StyledTableCell>
                 <StyledTableCell>
-                  <IconButton><MdAccountBalance className={styles.one} onClick={() => handleUser()} /></IconButton>
-                  <IconButton><MdDelete className={styles.two} onClick={() => handleDelete(item.id)} /></IconButton>
-                  <IconButton><MdEdit className={styles.three} onClick={() => handleEdit(item.id)} /></IconButton>
+                  <IconButton onClick={() => handleUser()} ><MdAccountBalance className={styles.one} /></IconButton>
+                  <IconButton onClick={() => handleDelete(item.id)}><MdDelete className={styles.two}  /></IconButton>
+                  <IconButton onClick={() => handleEdit(item.id)}><MdEdit className={styles.three}  /></IconButton>
                 </StyledTableCell>
               </TableRow>
             ))}
