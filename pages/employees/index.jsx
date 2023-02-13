@@ -3,7 +3,7 @@ import Heading from '../../src/components/Heading';
 import styles from '../../styles/Employees.module.css';
 import { MdAccountBalance, MdDelete, MdEdit } from 'react-icons/md';
 import { Box, Button, IconButton, styled, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
-import useEmployees from '../../src/hooks/useEmployees';
+import useEmployees from '../../src/hooks/employees/useEmployees';
 import Link from 'next/link';
 function Employees() {
   const [handleEdit, handleDelete, handleUser, users] = useEmployees();
