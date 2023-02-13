@@ -17,7 +17,7 @@ function AddEmployee() {
         </Link>
       </Box>
       <Box component={'form'}>
-        <Detail className={styles.detail} variant="subtitle2">
+        <Detail component={'div'} className={styles.detail} variant="subtitle2">
           <InputGroup>
             <TextField id="filled-basic" label="First Name" variant="filled" fullWidth size='small' />
             <TextField id="filled-basic" label="Last Name" variant="filled" fullWidth size='small' />
@@ -49,7 +49,7 @@ function AddEmployee() {
           </InputGroup>
         </Detail>
 
-        <Commission className={styles.commission} variant="subtitle2">
+        <Commission component={'div'} className={styles.commission} variant="subtitle2">
           <FormControlLabel control={<Checkbox defaultChecked />} label="No commission for this employee" />
           <Box sx={{ display: 'flex', justifyContent: 'end', marginBottom: '10px' }}>
             <ButtonGroup size='small' fullWidth={screenWidth < 600 ? true : fixedWidth < 600 ? true : false} orientation={screenWidth < 600 ? 'vertical' : fixedWidth < 600 ? 'vertical' : 'horizontal'}>

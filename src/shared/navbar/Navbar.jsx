@@ -7,11 +7,11 @@ function Navbar({ handleSidebar }) {
 
   return (
     <div className={styles.navbar}>
-      <Logo>
-        <IconButton>
-          <MdMenu onClick={handleSidebar} />
+      <Logo component={'div'}>
+        <IconButton onClick={handleSidebar}>
+          <MdMenu />
         </IconButton>
-        <Typography variant='h6'>Reflection</Typography>
+        <Typography variant='h6' component={'div'}>Reflection</Typography>
       </Logo>
       <IconButton>
         <Avatar />
